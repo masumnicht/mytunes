@@ -21,8 +21,14 @@
 
     <script>
       $(function() {
-        // set up model objects
+    // Library
+        // songData holds the mp3s
+        // Songs() is collection, points to SongModel
+        // SongModel gives each song play/queue methods
         var library = new Songs(songData);
+
+    // App
+        // AppModel 
         var app = new AppModel({library: library});
 
         // build a view for the top level of the whole app
