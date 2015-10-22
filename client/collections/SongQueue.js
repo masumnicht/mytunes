@@ -8,14 +8,16 @@ var SongQueue = Songs.extend({
 
   },
 
+  playInLine: function() {
+    if(this.length > 0){
+      console.log(this);
+      console.log(this.models[0])
+      this.models[0].play();
+    }
+  },
   playFirst: function(song) {
     if (this.length === 1){
       song.play();
-    }
-  },
-  playInLine: function() {
-    if(this.length> 1){
-      this[0].play();
     }
   },
   dequeue: function() {

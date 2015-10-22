@@ -18,6 +18,9 @@ var PlayerView = Backbone.View.extend({
     this.model = song;
     this.render();
   },
+  endSong: function(song) {
+    this.model.ended();
+  },
 
   render: function() {
     return this.$el.attr('src', this.model ? this.model.get('url') : '');
