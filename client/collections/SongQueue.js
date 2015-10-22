@@ -2,7 +2,7 @@
 var SongQueue = Songs.extend({
 
   initialize: function() {
-    this.on('add', this.playInline, this);
+    this.on('add', this.playFirst, this);
     this.on('remove', this.playInLine, this);
     this.on('dequeue', this.removeFromQueue, this);
 
