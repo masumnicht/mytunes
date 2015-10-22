@@ -13,7 +13,8 @@
     <script src="collections/Songs.js"></script>
     <script src="collections/SongQueue.js"></script>
     <script src="models/AppModel.js"></script>
-
+    <script src="views/SongQueueEntryView.js"></script>
+    <script src="views/SongQueueView.js"></script>
     <script src="views/PlayerView.js"></script>
     <script src="views/LibraryView.js"></script>
     <script src="views/LibraryEntryView.js"></script>
@@ -26,13 +27,10 @@
         // Songs() is collection, points to SongModel
         // SongModel gives each song play/queue methods
         var library = new Songs(songData);
-        var songQueue = new Songs(); 
 
     // App
         // AppModel 
-        var app = new AppModel({
-            library: library,
-            songQueue: songQueue});
+        var app = new AppModel({library: library});
 
         // build a view for the top level of the whole app
         var appView = new AppView({model: app});
