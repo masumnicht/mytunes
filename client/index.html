@@ -26,10 +26,13 @@
         // Songs() is collection, points to SongModel
         // SongModel gives each song play/queue methods
         var library = new Songs(songData);
+        var songQueue = new Songs(); 
 
     // App
         // AppModel 
-        var app = new AppModel({library: library});
+        var app = new AppModel({
+            library: library,
+            songQueue: songQueue});
 
         // build a view for the top level of the whole app
         var appView = new AppView({model: app});
