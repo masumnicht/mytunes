@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
-     below them until after the scripts load-->
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
@@ -22,20 +20,13 @@
 
     <script>
       $(function() {
-    // Library
-        // songData holds the mp3s
-        // Songs() is collection, points to SongModel
-        // SongModel gives each song play/queue methods
+    
         var library = new Songs(songData);
 
-    // App
-        // AppModel 
         var app = new AppModel({library: library});
 
-        // build a view for the top level of the whole app
         var appView = new AppView({model: app});
 
-        // put the view onto the screen
         $('body').append(appView.render());
       });
     </script>
